@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Windows vs Linux vs macOS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Windows vs Linux vs macOS</h1>
+  <p>Interactive operating system comparison</p>
+</header>
+
+<main>
+  <section>
+    <h2>What is an Operating System</h2>
+    <p>
+      An operating system (OS) is system software that manages hardware resources,
+      controls program execution, and provides services for applications and users.
+      It acts as the bridge between hardware and software.
+    </p>
+  </section>
+
+  <section>
+    <h2>Select an OS</h2>
+    <div class="buttons">
+      <button onclick="showOS('windows')">Windows</button>
+      <button onclick="showOS('linux')">Linux</button>
+      <button onclick="showOS('mac')">macOS</button>
+    </div>
+
+    <div id="windows" class="os-card">
+      <h3>Windows</h3>
+      <p>
+        Windows is designed for general-purpose computing and maximum compatibility.
+      </p>
+      <ul>
+        <li>Hybrid kernel architecture</li>
+        <li>Largest software and driver support</li>
+        <li>Dominant OS for gaming and offices</li>
+        <li>Higher malware targeting due to popularity</li>
+      </ul>
+    </div>
+
+    <div id="linux" class="os-card">
+      <h3>Linux</h3>
+      <p>
+        Linux emphasizes control, transparency, and performance.
+      </p>
+      <ul>
+        <li>Monolithic kernel with loadable modules</li>
+        <li>Fully open-source</li>
+        <li>Common in servers, cloud, and cybersecurity</li>
+        <li>Requires more technical knowledge</li>
+      </ul>
+    </div>
+
+    <div id="mac" class="os-card">
+      <h3>macOS</h3>
+      <p>
+        macOS is built specifically for Apple hardware and ecosystem integration.
+      </p>
+      <ul>
+        <li>XNU hybrid kernel</li>
+        <li>Strong application sandboxing</li>
+        <li>Stable performance on Apple devices</li>
+        <li>Limited hardware customization</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Kernel Architecture</h2>
+    <button onclick="toggleKernel()">Show / Hide Details</button>
+    <div id="kernelInfo" class="hidden">
+      <p>
+        The kernel is the core of the operating system. It manages CPU scheduling,
+        memory allocation, device drivers, and system calls.
+      </p>
+      <ul>
+        <li><strong>Windows:</strong> Hybrid kernel for flexibility.</li>
+        <li><strong>Linux:</strong> Monolithic kernel for performance.</li>
+        <li><strong>macOS:</strong> Hybrid kernel derived from Mach and BSD.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Resource Management</h2>
+    <ul>
+      <li><strong>CPU:</strong> All three use preemptive multitasking.</li>
+      <li><strong>Memory:</strong> Virtual memory with paging support.</li>
+      <li><strong>File System:</strong> NTFS (Windows), EXT4 (Linux), APFS (macOS).</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Security Model</h2>
+    <p>
+      Modern operating systems enforce security through user permissions,
+      isolation, and access control.
+    </p>
+    <input type="range" min="1" max="10" value="5" id="securityRange">
+    <p id="securityText">Security Level: Medium</p>
+  </section>
+
+  <section>
+    <h2>Market Usage Comparison</h2>
+    <canvas id="osChart" width="500" height="250"></canvas>
+  </section>
+
+  <section>
+    <h2>Advantages Summary</h2>
+    <table>
+      <tr>
+        <th>OS</th>
+        <th>Main Strength</th>
+      </tr>
+      <tr>
+        <td>Windows</td>
+        <td>Compatibility and usability</td>
+      </tr>
+      <tr>
+        <td>Linux</td>
+        <td>Security and customization</td>
+      </tr>
+      <tr>
+        <td>macOS</td>
+        <td>Stability and ecosystem integration</td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Bibliography</h2>
+    <ol>
+      <li>Silberschatz, Galvin, Gagne – Operating System Concepts</li>
+      <li>Microsoft Windows Internals Documentation</li>
+      <li>Linux Kernel Documentation</li>
+      <li>Apple macOS Security Overview</li>
+    </ol>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
